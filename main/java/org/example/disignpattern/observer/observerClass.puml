@@ -1,0 +1,25 @@
+@startuml
+'宣言する抽象クラス、インターフェースを記載
+
+interface Subject
+interface Observer
+
+
+Observer <|- ConcreteObserver
+Subject <|-- ConcreteSubject
+
+Observer <-- Subject
+ConcreteSubject <-- ConcreteObserver
+
+
+
+
+class ConcreteObserver {
+registerObserver()
+}
+
+class ConcreteSubject {
+update()
+}
+
+@enduml
